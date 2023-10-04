@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="./style.css">
+    <script src="main.js"></script>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario de registro</title>
+</head>
+
+<body>
+    <div id="hoja">
+        <h1>Formulario de Registro</h1>
+        <div class="grupo">
+            <label for="nombre">Nombres</label>
+            <input type="text" name="nombre" id="nombre">
+        </div>
+        <div class="grupo">
+            <label for="apellido">Apellidos</label>
+            <input type="text" name="apellido" id="apellido">
+        </div>
+
+        <div class="grupo">
+            <label for="fm">Tipo de documento</label>
+            <select id="fm" name="tipoDocumento">
+                <option value="cc">Cédula de ciudadanía</option>
+                <option value="ce">Cédula de extranjería</option>
+                <option value="ti">Tarjeta de identidad</option>
+                <option value="rc">Registro civil</option>
+            </select>
+        </div>
+        <div class="grupo">
+            <label for="numDocumento">Número de documento</label>
+            <input type="text" name="numDocumento" id="numDocumento">
+        </div>
+
+
+        <div class="grupo">
+            <label>Genero</label>
+        </div>
+        <div id="genr" class="grupo">
+            <div class="gend">
+                <label for="hombre">Hombre</label>
+                <input type="radio" name="genero" id="hombre" class="genero" value="Hombre">
+            </div>
+            <div class="gend">
+                <label for="mujer">Mujer</label>
+                <input type="radio" name="genero" id="mujer" class="genero" value="Mujer">
+            </div>
+        </div>
+
+
+        <div class="grupo">
+            <label for="telefono">Teléfono</label>
+            <input type="text" name="telefono" id="telefono">
+        </div>
+        <div class="grupo">
+            <label for="correo" >Correo</label>
+            <input type="text" name="correo" id="correo">
+        </div>
+
+        <div class="grupo">
+            <label for="fecNacimiento">Fecha de nacimiento</label>
+            <input type="date" name="fecNacimiento" id="fecNacimiento">
+        </div>
+        <div class="grupo">
+            <input type="button" value="Aceptar" onclick="validacion()">
+        </div>
+    </div>
+</body>
+
+</html>

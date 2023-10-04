@@ -1,0 +1,67 @@
+* {
+    margin: 0;
+    border-radius: 8px;
+}
+
+#hoja {
+    font-family: Arial, sans-serif;
+    background-color: #fff;
+    border-radius: 8px;
+    width: 800px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    text-align: center;
+    padding: 90px;
+}
+
+body {
+    background-color: #f0f0f0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.grupo {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+label {
+    display: flex;
+    align-items: left;
+}
+
+
+input[type = text], input[type = date]  {
+    height: 30px;
+    border: 1px solid black;
+}
+
+select, input[type = button] {
+    height: 40px;
+    border: 1px solid black;
+}
+
+.grupo {
+    margin-bottom: 20px;
+}
+
+#genr {
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+    gap: 10px;
+}
+
+.gend {
+    display: flex;
+    flex-direction: row;
+    gap: 20px
+}
+
+#mujer {
+    position: relative;
+    left: 17px
+}
