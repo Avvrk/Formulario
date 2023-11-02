@@ -48,6 +48,7 @@ function registro() {
     document.getElementById("tablaa").innerHTML = "";
 
     pintar();
+    limpiar()
 }
 
 function validacion() {
@@ -114,11 +115,13 @@ function pintar() {
         let eliminar = document.createElement("button");
 
         editar.textContent = "📝";
+        editar.classList.add('botonEditar');
         editar.addEventListener("click", () => {
             document.querySelector("#ac").value = "Actualizar";
             edit(item, index);
         });
         eliminar.textContent = "❌";
+        eliminar.classList.add('botonEliminar');
         eliminar.addEventListener("click", () => {
             delet(index);
         })
@@ -146,28 +149,37 @@ function pintar() {
 
         document.getElementById("tablaa").appendChild(frag);
     })
+}
 
-    function edit(item,i){
-        operacion = true;
-        indice = i;
-        console.log(item);
-        document.getElementById("nombre").value = item.nombre;
-        document.getElementById("apellido").value = item.apellido;
-        document.getElementById("fm").value = item.tipoDocumento;
-        document.getElementById("numDocumento").value = item.numDocumento;
-        document.getElementById("genr").value = item.genero;
-        document.getElementById("telefono").value = item.telefono;
-        document.getElementById("correo").value = item.correo;
-        document.getElementById("fecNacimiento").value = item.fecNacimiento;
-    }
+function edit(item, i) {
+    operacion = true;
+    indice = i;
+    console.log(item);
+    document.getElementById("nombre").value = item.nombre;
+    document.getElementById("apellido").value = item.apellido;
+    document.getElementById("fm").value = item.tipoDocumento;
+    document.getElementById("numDocumento").value = item.numDocumento;
+    document.getElementById("genr").value = item.genero;
+    document.getElementById("telefono").value = item.telefono;
+    document.getElementById("correo").value = item.correo;
+    document.getElementById("fecNacimiento").value = item.fecNacimiento;
+}
 
-    function delet(i) {
-        indice = i;
-        datos.splice(indice, 1);
+function limpiar() {
 
-        document.getElementById("tablaa").innerHTML = "";
-        pintar();
-    }
+    document.getElementById("nombre").value = '';
+    document.getElementById("apellido").value = '';
+    document.getElementById("fm").value = '';
+    document.getElementById("numDocumento").value = '';
+    document.getElementById("genr").value = '';
+    document.getElementById("telefono").value = '';
+    document.getElementById("correo").value = '';
+    document.getElementById("fecNacimiento").value = '';
+}
 
-
+function delet(i) {
+    indice = i;
+    datos.splice(indice, 1);
+    document.getElementById("tablaa").innerHTML = "";
+    pintar();
 }
